@@ -41,7 +41,14 @@ namespace Bakery.Tests
     [TestMethod] //4
     public void CalcTotal_CalculatesTotalForBreadAndPastry_float()
     {
-      
+      //arrange
+      Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
+      Boulangerie.Bread newBread = new Boulangerie.Bread(1);
+      Boulangerie.Pastry newPastry = new Boulangerie.Pastry(1);
+      //act
+      float result = newBoulangerie.CalcTotal();
+      //assert
+      Assert.AreEqual(8.99, result);
     }
   }
 }
