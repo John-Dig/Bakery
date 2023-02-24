@@ -19,5 +19,17 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Boulangerie), newBoulangerie.GetType());
 
     }
+    [TestMethod] //2
+    public void Bread_CreatesInstanceOfBread_Class()
+    {
+      //arrange
+      Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
+      Boulangerie.Bread newBread = new Boulangerie.Bread(1);
+      //act
+      //assert
+      Assert.AreEqual(typeof(Boulangerie.Bread), newBread.GetType());
+
+      
+    }
   }  
 }  
