@@ -13,9 +13,17 @@ namespace Bakery.Models
     }
     public double CalcTotal(int breadTotal, int pastryTotal) //UPDATE FOR EFFICIENCY! make sure to output rounded to 2 decimals
       {
-        float resultRough = breadTotal * 5 + pastryTotal * 2;
-        double result = Math.Round(resultRough, 2);
-        return (result);
+        double breadOrder = breadTotal;
+        int pastryOrder = pastryTotal;
+        int breadPrice = 5;
+        int pastryPrice = 2;
+        // int freeBreadDeal = 3;
+        // int freePastryDeal = 4;
+        double freeBreadCount = Math.Floor(breadOrder /3.0); //add converted var later
+        double freePastryCount = Math.Floor(pastryOrder / 4.0); //add converted var later
+        double breadTotalPrice = Math.Round(((breadOrder - freeBreadCount) * breadPrice),2);
+        double pastryTotalPrice = Math.Round(((pastryOrder - freePastryCount) * pastryPrice), 2);
+        return breadTotalPrice + pastryTotalPrice;
       }
     public class Bread //class for bread
     {
