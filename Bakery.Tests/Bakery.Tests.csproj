@@ -1,6 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+
+<!-- this part is different due to problems we were having on older mac (file was created on mac with M2) not sure if this has anything to do with why it was not working, so try also without <propertyGroup> block -->
+  <PropertyGroup> 
     <TargetFramework>net6.0</TargetFramework>
       <GenerateAssemblyInfo>
         false
@@ -22,3 +24,4 @@
 
 
 </Project>
+
