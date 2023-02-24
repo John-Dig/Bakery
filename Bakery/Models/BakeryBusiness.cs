@@ -11,9 +11,10 @@ namespace Bakery.Models
       CheckoutMessage = checkoutMessage;
       CheckoutTotal = checkoutTotal;
     }
-    public float CalcTotal(int breadTotal, int pastryTotal) //make sure to output rounded to 2 decimals
+    public double CalcTotal(int breadTotal, int pastryTotal) //UPDATE FOR EFFICIENCY! make sure to output rounded to 2 decimals
       {
-        float result = Round((breadTotal * 5 + pastryTotal * 2 ),2);
+        float resultRough = breadTotal * 5 + pastryTotal * 2;
+        double result = Math.Round(resultRough, 2);
         return (result);
       }
     public class Bread //class for bread

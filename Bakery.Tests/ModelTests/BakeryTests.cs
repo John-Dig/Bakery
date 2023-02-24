@@ -43,12 +43,12 @@ namespace Bakery.Tests
     {
       //arrange
       Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
-      Boulangerie.Bread newBread = new Boulangerie.Bread(1);
+      Boulangerie.Bread newBread = new Boulangerie.Bread(2);
       Boulangerie.Pastry newPastry = new Boulangerie.Pastry(1);
       //act
-      float result = newBoulangerie.CalcTotal();
+      double result = newBoulangerie.CalcTotal(newBread.Count, newPastry.Count);
       //assert
-      Assert.AreEqual(8.99, result);
+      Assert.AreEqual(12.00, result);
     }
   }
 }
