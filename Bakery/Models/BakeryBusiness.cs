@@ -14,7 +14,7 @@ namespace Bakery.Models
     public class Bread //class for bread
     {
       public int Count { get; set; }
-      public float CalcBreadTotal()
+      public float CalcTotal()
       {
         return (8.99f);
       }
@@ -22,6 +22,18 @@ namespace Bakery.Models
       {
         Count = count;
       }
+    }  
+    public class Pastry //class for pastry
+    {
+      public int Count { get; set; }
+      public float CalcTotal()
+      {
+        return (8.99f);
+      }
+      public Pastry(int count)
+      {
+        Count = count;
+      }
     }
   }
-}
+}  
