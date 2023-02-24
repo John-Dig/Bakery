@@ -11,13 +11,14 @@ namespace Bakery.Models
       CheckoutMessage = checkoutMessage;
       CheckoutTotal = checkoutTotal;
     }
-    public class Bread //class for bread
-    {
-      public int Count { get; set; }
-      public float CalcTotal()
+    public float CalcTotal()
       {
         return (8.99f);
       }
+    public class Bread //class for bread
+    {
+      public int Count { get; set; }
+      
       public Bread(int count)
       {
         Count = count;
@@ -26,10 +27,7 @@ namespace Bakery.Models
     public class Pastry //class for pastry
     {
       public int Count { get; set; }
-      public float CalcTotal()
-      {
-        return (8.99f);
-      }
+      
       public Pastry(int count)
       {
         Count = count;

@@ -38,5 +38,10 @@ namespace Bakery.Tests
       //assert
       Assert.AreEqual(typeof(Boulangerie.Pastry), newPastry.GetType());
     }
+    [TestMethod] //4
+    public void CalcTotal_CalculatesTotalForBreadAndPastry_float()
+    {
+      
+    }
   }
 }
