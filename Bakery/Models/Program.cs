@@ -27,6 +27,8 @@ namespace Bakery
 
       Console.ForegroundColor = ConsoleColor.DarkYellow;
       Console.WriteLine("**~*~~*~~*~~*~~*~~*~<()>~*~~*~~*~~*~~*~~*~~*~~*~**");
+      Console.ForegroundColor = ConsoleColor.DarkGreen;
+      Console.WriteLine("Boulangerie Mauvais");
       Console.ForegroundColor = ConsoleColor.Green;
       Console.WriteLine("Welcome to the fanciest bakery in all of digital France!");
       Console.WriteLine("Today's specials are:");
@@ -37,9 +39,8 @@ namespace Bakery
 
       Console.ForegroundColor = ConsoleColor.DarkGray;
       Console.WriteLine();
-      Console.WriteLine("(Make sure to double check your order that you are receiving the best deal,");
+      Console.WriteLine("(Make sure to double-check that you are receiving the best deal,");
       Console.WriteLine("sometimes employees take advantage of ignorant touristes)");
-      //Console.Font = new System.Drawing.Font("Helvetica", 12, System.Drawing.FontStyle.Italic);
       Console.WriteLine();
 
       Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
