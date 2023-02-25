@@ -1,4 +1,4 @@
-# "Boulangerie Mauvais" (French Bakery)
+# La Mauvaise Boulangerie (French Bakery)
 
 #### _By John Diggins_
 
