@@ -28,7 +28,7 @@ namespace Bakery
       Console.ForegroundColor = ConsoleColor.DarkYellow;
       Console.WriteLine("**~*~~*~~*~~*~~*~~*~<()>~*~~*~~*~~*~~*~~*~~*~~*~**");
       Console.ForegroundColor = ConsoleColor.DarkGreen;
-      Console.WriteLine("Boulangerie Mauvais");
+      Console.WriteLine("La Mauvaise Boulangerie");
       Console.ForegroundColor = ConsoleColor.Green;
       Console.WriteLine("Welcome to the fanciest bakery in all of digital France!");
       Console.WriteLine("Today's specials are:");
