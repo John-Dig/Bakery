@@ -12,7 +12,7 @@
 ### Setup Instructions
 
 1. Clone this repo.
-2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "Bakery.Solution".
+2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's production directory called "Bakery.Solution/Bakery".
 3. In the command line, run the command "dotnet run" to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
 
 ### Known Bugs

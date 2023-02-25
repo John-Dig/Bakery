@@ -37,7 +37,8 @@ namespace Bakery
 
       Console.ForegroundColor = ConsoleColor.DarkGray;
       Console.WriteLine();
-      Console.WriteLine("(Make sure to double check your order that you are receiving the best deal, the economy is rough and sometime employees take advantage of -ignorant touristes-)");
+      Console.WriteLine("(Make sure to double check your order that you are receiving the best deal,");
+      Console.WriteLine("sometimes employees take advantage of ignorant touristes)");
       //Console.Font = new System.Drawing.Font("Helvetica", 12, System.Drawing.FontStyle.Italic);
       Console.WriteLine();
 
@@ -54,7 +55,7 @@ namespace Bakery
       int pastryCount = int.Parse(pastries);
 
       newBoulangerie.CheckoutTotal = (float)newBoulangerie.CalcTotal(breadCount, pastryCount);
-      newBoulangerie.MissingFreeStuff(breadCount, pastryCount);
+      newBoulangerie.CheckoutMessage = "Have a wonderful rest of your day mon ami!";
       Console.WriteLine();
       Console.WriteLine($"Your excellent selection will cost you ${newBoulangerie.CheckoutTotal}.00");
       Console.WriteLine();
@@ -62,7 +63,7 @@ namespace Bakery
 
       Console.WriteLine(newBoulangerie.SneakyFrench(breadCount, pastryCount));
       Console.WriteLine();
-      Console.WriteLine("Have a wonderful rest of your day mon ami!");
+      Console.WriteLine(newBoulangerie.CheckoutMessage);
       Console.ResetColor();
 
     }
