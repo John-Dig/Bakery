@@ -33,40 +33,38 @@ namespace Bakery
       Console.ForegroundColor = ConsoleColor.Yellow;
 
       Console.WriteLine("All Bread Loaves -- > Buy 2, get one free!");
-      Console.WriteLine("All pastries croissants, macarons, and éclairs-- > Buy 3, get one free!");
+      Console.WriteLine("All croissants, macarons, éclairs and other pastries-- > Buy 3, get one free!");
 
       Console.ForegroundColor = ConsoleColor.DarkGray;
       Console.WriteLine();
       Console.WriteLine("(Make sure to double check your order that you are receiving the best deal, the economy is rough and sometime employees take advantage of -ignorant touristes-)");
       //Console.Font = new System.Drawing.Font("Helvetica", 12, System.Drawing.FontStyle.Italic);
       Console.WriteLine();
-      Console.ResetColor();
 
       Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
 
+      Console.ForegroundColor = ConsoleColor.White;
+      Console.WriteLine("Bonjour mon ami!");
+      Console.WriteLine();
       Console.WriteLine("How many loaves of bread would you like?");
-      //string bread = Console.ReadLine();
-      //int breadCount = int.Parse(bread);
-      int breadCount = 6;
+      string bread = Console.ReadLine();
+      int breadCount = int.Parse(bread);
       Console.WriteLine("How many pastries would you like (make your own selection)");
-      int pastryCount = 5;
-      //string pastries = Console.ReadLine();
-      //int pastryCount = int.Parse(pastries);
-      
+      string pastries = Console.ReadLine();
+      int pastryCount = int.Parse(pastries);
+
       newBoulangerie.CheckoutTotal = (float)newBoulangerie.CalcTotal(breadCount, pastryCount);
+      newBoulangerie.MissingFreeStuff(breadCount, pastryCount);
+      Console.WriteLine();
       Console.WriteLine($"Your excellent selection will cost you ${newBoulangerie.CheckoutTotal}.00");
-
-      newBoulangerie.CheckoutTotal = 5.55f;
-
+      Console.WriteLine();
 
 
-      // Game newGame = new Game();
-      // string human = Console.ReadLine();
-      // string computer = newGame.Evaluate();
-      // Console.WriteLine("Computer Choice:" + computer);
-      // Console.WriteLine("Human Choice: " + human);
-      // string result = newGame.GameEvaluator(computer, human);
-      // Console.WriteLine(result);
+      Console.WriteLine(newBoulangerie.SneakyFrench(breadCount, pastryCount));
+      Console.WriteLine();
+      Console.WriteLine("Have a wonderful rest of your day mon ami!");
+      Console.ResetColor();
+
     }
   }
 }
