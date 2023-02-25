@@ -25,6 +25,17 @@ namespace Bakery.Models
         double pastryTotalPrice = Math.Round(((pastryOrder - freePastryCount) * pastryPrice), 2);
         return breadTotalPrice + pastryTotalPrice;
       }
+    public bool MissingFreeStuff(int breadTotal, int pastryTotal) 
+    {
+      if ((breadTotal +1) % 3 == 0 || (pastryTotal + 1) % 4 == 0) 
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }  
     public class Bread //class for bread
     {
       public int Count { get; set; }
