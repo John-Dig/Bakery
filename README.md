@@ -22,7 +22,7 @@ Make an order at a french bakery.  Enjoy all of the ambiance.  Just make sure to
 
 ### Known Bugs
 
-It should function just fine.  There are some inefficiencies in the code (unnecessary data types), and some other refactoring could be done to make it more modular and utilize more OOP that I was originally planning on doing but ran out of time.
+I don't speak french, so the french could be wrong.  
 
 ##### License
 MIT
