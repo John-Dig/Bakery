@@ -65,6 +65,7 @@ namespace Bakery.Tests
     [TestMethod] //6
     public void MissingFreeStuff_ReturnsTrueIfNumberSelectedIsNotIncludingAFreeEarnedItem_bool()
     {
+      //arrange
       Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
       Boulangerie.Bread newBread = new Boulangerie.Bread(5);
       Boulangerie.Pastry newPastry = new Boulangerie.Pastry(7);
@@ -73,16 +74,17 @@ namespace Bakery.Tests
       //assert
       Assert.IsTrue(result);
     }
-    // [TestMethod] //7
-    // public void SneakyFrench_ReturnsDifferentMessageIfCustomerMissesDiscount_String()
-    // {
-    //   Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
-    //   Boulangerie.Bread newBread = new Boulangerie.Bread(5);
-    //   Boulangerie.Pastry newPastry = new Boulangerie.Pastry(7);
-    //   //act
-    //   bool result = newBoulangerie.MissingFreeStuff(newBread.Count, newPastry.Count);
-    //   //assert
-    //   Assert.AreEqual("Toi, iel touriste, je vais partager ça avec ma copine pendant que nous buvons du vin au bord de la Seine lors de notre soirée romantique ce soir.",result);
-    // }  
+    [TestMethod] //7
+    public void SneakyFrench_ReturnsDifferentMessageIfCustomerMissesDiscount_String()
+    {
+      //arrange
+      Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
+      Boulangerie.Bread newBread = new Boulangerie.Bread(5);
+      Boulangerie.Pastry newPastry = new Boulangerie.Pastry(7);
+      //act
+      bool result = newBoulangerie.MissingFreeStuff(newBread.Count, newPastry.Count);
+      //assert
+      Assert.AreEqual(true, result);
+    }
   }
 }
