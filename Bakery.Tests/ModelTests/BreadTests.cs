@@ -20,6 +20,15 @@ namespace Bakery.Tests
       //assert
       Assert.AreEqual(typeof(Boulangerie.Bread), newBread.GetType());
     }
-    [TestMethod] //9
+    [TestMethod] //9 
+    public void BreadCount_ReturnsBreadCount_Int()
+    {
+      //arrange
+      Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
+      //act
+      Boulangerie.Bread newBread = new Boulangerie.Bread(5);
+      //assert
+      Assert.AreEqual(5, newBread.Count);
+    }
   }
 }
