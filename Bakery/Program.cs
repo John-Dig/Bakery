@@ -48,13 +48,40 @@ namespace Bakery
       Console.ForegroundColor = ConsoleColor.White;
       Console.WriteLine("Bonjour mon ami!");
       Console.WriteLine();
-      Console.WriteLine("How many loaves of bread would you like?");
-      string bread = Console.ReadLine();
-      int breadCount = int.Parse(bread);
-      Console.WriteLine("How many pastries would you like (make your own selection)");
-      string pastries = Console.ReadLine();
-      int pastryCount = int.Parse(pastries);
 
+      //bread input
+      int breadCount = 0;
+      bool validInput = false;
+      while (!validInput)
+      {
+        Console.WriteLine("How many loaves of bread would you like?");
+        string bread = Console.ReadLine();
+        if (int.TryParse(bread, out breadCount))
+        {
+          validInput = true;
+        }
+        else
+        {
+          Console.WriteLine("Please enter a number.");
+        }
+      }
+
+      //pastry input
+      int pastryCount = 0;
+      validInput = false;
+      while (!validInput)
+      {
+        Console.WriteLine("How many pastries would you like (make your own selection)");
+        string pastries = Console.ReadLine();
+        if (int.TryParse(pastries, out pastryCount))
+        {
+          validInput = true;
+        }
+        else
+        {
+          Console.WriteLine("Please enter a number");
+        }
+      }
       newBoulangerie.CheckoutTotal = (float)newBoulangerie.CalcTotal(breadCount, pastryCount);
       newBoulangerie.CheckoutMessage = "Have a wonderful rest of your day mon ami!";
       Console.WriteLine();
