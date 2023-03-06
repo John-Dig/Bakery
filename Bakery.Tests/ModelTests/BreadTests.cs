@@ -20,6 +20,6 @@ namespace Bakery.Tests
       //assert
       Assert.AreEqual(typeof(Boulangerie.Bread), newBread.GetType());
     }
-   
+    [TestMethod] //9
   }
 }
