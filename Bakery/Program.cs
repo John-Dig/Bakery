@@ -61,7 +61,7 @@ namespace Bakery
         string bread = Console.ReadLine();
         if (int.TryParse(bread, out breadCount))
         {
-          Boulangerie.newBread(breadCount)
+          newBread.Count = breadCount;
           validInput = true;
         }
         else
@@ -79,6 +79,7 @@ namespace Bakery
         string pastries = Console.ReadLine();
         if (int.TryParse(pastries, out pastryCount))
         {
+          newPastry.Count = pastryCount;
           validInput = true;
         }
         else
@@ -86,14 +87,14 @@ namespace Bakery
           Console.WriteLine("Please enter a number");
         }
       }
-      newBoulangerie.CheckoutTotal = (float)newBoulangerie.CalcTotal(breadCount, pastryCount);
+      newBoulangerie.CheckoutTotal = (float)newBoulangerie.CalcTotal(newBread.Count, newPastry.Count);
       newBoulangerie.CheckoutMessage = "Have a wonderful rest of your day mon ami!";
       Console.WriteLine();
       Console.WriteLine($"Your excellent selection will cost you ${newBoulangerie.CheckoutTotal}.00");
       Console.WriteLine();
 
 
-      Console.WriteLine(newBoulangerie.SneakyFrench(breadCount, pastryCount));
+      Console.WriteLine(newBoulangerie.SneakyFrench(newBread.Count, newPastry.Count)); //only outputs if you missed your free item
       Console.WriteLine();
       Console.WriteLine(newBoulangerie.CheckoutMessage);
       Console.ResetColor();
