@@ -2,7 +2,7 @@ using System;
 
 namespace Bakery.Models
 {
-  public class Boulangerie //the class for the whole bakery
+  public partial class Boulangerie //the class for the whole bakery
   {
     public string CheckoutMessage { get; set; }
     public float CheckoutTotal { get; set; }
@@ -49,23 +49,5 @@ namespace Bakery.Models
       }
     }
 
-    public class Bread //class for bread
-    {
-      public int Count { get; set; }
-
-      public Bread(int count)
-      {
-        Count = count;
-      }
-    }
-    public class Pastry //class for pastry
-    {
-      public int Count { get; set; }
-
-      public Pastry(int count)
-      {
-        Count = count;
-      }
-    }
   }
 }

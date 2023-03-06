@@ -18,7 +18,7 @@ namespace Bakery.Tests
       Console.WriteLine(newBoulangerie.CheckoutTotal);
       Assert.AreEqual(typeof(Boulangerie), newBoulangerie.GetType());
     }
-    [TestMethod] //2
+    [TestMethod] //2 retest
     public void Bread_CreatesInstanceOfBread_Class()
     {
       //arrange
@@ -28,7 +28,7 @@ namespace Bakery.Tests
       //assert
       Assert.AreEqual(typeof(Boulangerie.Bread), newBread.GetType());
     }
-    [TestMethod] //3
+    [TestMethod] //3 retest
     public void Pastry_CreatesInstanceOfPastry_Class()
     {
       //arrange

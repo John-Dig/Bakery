@@ -9,7 +9,7 @@ namespace Bakery
   {
     static void Main()
     {
-
+#region PrettyStuff
       Console.Clear();
       Console.WriteLine("\x1b[44m" + new string(' ', 17) + "\x1b[0m\x1b[47m" + new string(' ', 16) + "\x1b[0m\x1b[41m" + new string(' ', 17) + "\x1b[0m");
       Console.WriteLine("\x1b[44m" + new string(' ', 17) + "\x1b[0m\x1b[47m" + new string(' ', 16) + "\x1b[0m\x1b[41m" + new string(' ', 17) + "\x1b[0m");
@@ -42,13 +42,16 @@ namespace Bakery
       Console.WriteLine("(Make sure to double-check that you are receiving the best deal,");
       Console.WriteLine("sometimes employees take advantage of ignorant touristes)");
       Console.WriteLine();
-
-      Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
-
       Console.ForegroundColor = ConsoleColor.White;
       Console.WriteLine("Bonjour mon ami!");
       Console.WriteLine();
+#endregion
+      //instantiate Bakery, and bread and pastry order
+      Boulangerie newBoulangerie = new Boulangerie("default message", 5.55f);
+      Boulangerie.Bread newBread = new Boulangerie.Bread(0);
+      Boulangerie.Pastry newPastry = new Boulangerie.Pastry(0);
 
+      
       //bread input
       int breadCount = 0;
       bool validInput = false;
@@ -58,6 +61,7 @@ namespace Bakery
         string bread = Console.ReadLine();
         if (int.TryParse(bread, out breadCount))
         {
+          Boulangerie.newBread(breadCount)
           validInput = true;
         }
         else
